@@ -231,7 +231,7 @@ function loadPaket() {
     
     paketData.forEach(paket => {
         const card = document.createElement('div');
-        card.className = 'col-md-4';
+        card.className = 'col-12 col-md-6 col-lg-4';
         card.innerHTML = `
             <div class="card paket-card shadow-sm h-100">
                 <div class="position-relative">
@@ -313,12 +313,12 @@ function loadGaleri() {
     
     galeriData.forEach((url, index) => {
         const col = document.createElement('div');
-        col.className = 'col-md-4 col-sm-6';
+        col.className = 'col-6 col-md-4 col-lg-3';
         col.innerHTML = `
             <div class="galeri-item" data-bs-toggle="modal" data-bs-target="#galeriModal" data-image="${url}">
                 <img src="${url}" 
                      alt="Galeri ${index + 1}" 
-                     class="img-fluid"
+                     class="img-fluid w-100"
                      loading="lazy">
             </div>
         `;
@@ -363,29 +363,29 @@ function loadVideo() {
     
     videoData.forEach((video, index) => {
         const col = document.createElement('div');
-        col.className = 'col-md-4';
+        col.className = 'col-12 col-md-6 col-lg-4';
         
         let videoHtml = '';
         if (video.type === 'youtube') {
             videoHtml = `
-                <div class="video-wrapper">
+                <div class="video-wrapper mb-3">
                     <iframe src="https://www.youtube.com/embed/${video.id}" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                             allowfullscreen>
                     </iframe>
                 </div>
-                <h6 class="mt-2">${video.title}</h6>
+                <h6 class="mt-2 mb-3" style="font-size: 0.9rem;">${video.title}</h6>
             `;
         } else if (video.type === 'mp4') {
             videoHtml = `
-                <div class="video-wrapper">
+                <div class="video-wrapper mb-3">
                     <video controls class="w-100 h-100">
                         <source src="${video.url}" type="video/mp4">
                         Browser Anda tidak mendukung video.
                     </video>
                 </div>
-                <h6 class="mt-2">${video.title}</h6>
+                <h6 class="mt-2 mb-3" style="font-size: 0.9rem;">${video.title}</h6>
             `;
         }
         
@@ -400,7 +400,7 @@ function loadTestimoni() {
     
     testimoniData.forEach(testimoni => {
         const col = document.createElement('div');
-        col.className = 'col-md-4';
+        col.className = 'col-12 col-md-6 col-lg-4';
         col.innerHTML = `
             <div class="card testimoni-card shadow-sm h-100">
                 <div class="card-body">

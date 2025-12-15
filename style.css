@@ -357,30 +357,265 @@ img[loading="lazy"].loaded {
 
 /* Responsive */
 @media (max-width: 768px) {
+    /* Navbar */
+    .navbar-brand {
+        font-size: 1rem;
+    }
+    
+    .navbar-brand small {
+        font-size: 0.7rem;
+    }
+    
+    .nav-link {
+        padding: 0.5rem 0;
+    }
+    
+    .navbar-nav .btn {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+        min-height: 80vh;
+    }
+    
     .hero-section h1 {
-        font-size: 2rem;
+        font-size: 1.75rem;
+        line-height: 1.3;
+    }
+    
+    .hero-section .lead {
+        font-size: 1rem;
     }
     
     .hero-section .btn {
         width: 100%;
         margin-bottom: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
     }
     
+    .hero-section .d-flex.gap-3 {
+        flex-direction: column;
+        gap: 0.5rem !important;
+    }
+    
+    /* Cards */
+    .card-img-top {
+        height: 180px;
+    }
+    
+    .paket-card .card-body {
+        padding: 1rem;
+    }
+    
+    /* Galeri */
+    .galeri-item {
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Video */
+    .video-wrapper {
+        margin-bottom: 1rem;
+    }
+    
+    /* Testimoni */
+    .testimoni-avatar {
+        width: 50px;
+        height: 50px;
+    }
+    
+    /* Footer */
+    footer .col-lg-4 {
+        margin-bottom: 2rem;
+    }
+    
+    /* Kontak */
+    #kontak .col-lg-6 {
+        margin-bottom: 1.5rem;
+    }
+    
+    #kontak iframe {
+        min-height: 300px !important;
+    }
+    
+    /* Chatbot Button */
+    .chatbot-btn {
+        width: 50px !important;
+        height: 50px !important;
+        bottom: 1rem !important;
+        right: 1rem !important;
+        margin: 0 !important;
+    }
+    
+    .chatbot-btn i {
+        font-size: 1.2rem !important;
+    }
+    
+    /* Chatbot Modal */
     #chatbotModal .modal-dialog {
         margin: 0.5rem;
+        max-width: calc(100% - 1rem);
+    }
+    
+    #chatbotModal .modal-content {
+        height: calc(100vh - 1rem);
+        max-height: calc(100vh - 1rem);
     }
     
     #chatbotModal .modal-body {
-        height: 400px !important;
+        height: calc(100vh - 200px) !important;
+        max-height: calc(100vh - 200px) !important;
+        display: flex;
+        flex-direction: column;
     }
     
     #chatbotMessages {
-        height: 300px !important;
+        height: calc(100vh - 300px) !important;
+        max-height: calc(100vh - 300px) !important;
+        flex: 1;
+        overflow-y: auto;
+        padding: 1rem !important;
+    }
+    
+    #chatbotModal .modal-header {
+        padding: 0.75rem 1rem;
+        flex-wrap: wrap;
+    }
+    
+    #chatbotModal .modal-header h5 {
+        font-size: 0.9rem;
+        margin: 0;
+    }
+    
+    #chatbotModal .modal-header .btn {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.8rem;
     }
     
     .chatbot-avatar {
-        width: 35px;
-        height: 35px;
+        width: 30px;
+        height: 30px;
+    }
+    
+    .chatbot-avatar i {
+        font-size: 0.9rem !important;
+    }
+    
+    #chatbotModal .modal-header .d-flex {
+        gap: 0.25rem;
+    }
+    
+    #chatbotModal .modal-header .btn-sm {
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #chatbotModal .p-3 {
+        padding: 0.75rem !important;
+    }
+    
+    #chatbotModal .quick-btn {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.6rem;
+        white-space: nowrap;
+    }
+    
+    #chatbotModal .quick-btn i {
+        font-size: 0.8rem;
+    }
+    
+    .message-bubble {
+        max-width: 85%;
+        padding: 0.6rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Section Padding */
+    section {
+        padding: 2rem 0 !important;
+    }
+    
+    /* Container */
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    /* Heading */
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    /* Toast */
+    .toast-container {
+        padding: 0.5rem !important;
+        top: 1rem !important;
+        right: 0.5rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section h1 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-section .lead {
+        font-size: 0.9rem;
+    }
+    
+    .card-img-top {
+        height: 160px;
+    }
+    
+    .chatbot-btn {
+        width: 45px !important;
+        height: 45px !important;
+    }
+    
+    #chatbotModal .modal-dialog {
+        margin: 0.25rem;
+        max-width: calc(100% - 0.5rem);
+    }
+    
+    #chatbotModal .modal-content {
+        height: calc(100vh - 0.5rem);
+        max-height: calc(100vh - 0.5rem);
+    }
+    
+    #chatbotMessages {
+        height: calc(100vh - 280px) !important;
+        max-height: calc(100vh - 280px) !important;
+        padding: 0.75rem !important;
+    }
+    
+    .message-bubble {
+        max-width: 90%;
+        font-size: 0.85rem;
+        padding: 0.5rem 0.7rem;
+    }
+    
+    #chatbotModal .quick-btn {
+        font-size: 0.7rem;
+        padding: 0.35rem 0.5rem;
+    }
+    
+    #chatbotModal .input-group {
+        flex-wrap: nowrap;
+    }
+    
+    #chatbotModal .form-control {
+        font-size: 0.9rem;
+    }
+    
+    #chatbotModal .btn-primary {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.9rem;
     }
 }
 
@@ -405,5 +640,105 @@ html {
 
 #chatbotMessages::-webkit-scrollbar-thumb:hover {
     background: var(--secondary-color);
+}
+
+/* Additional Mobile Fixes */
+@media (max-width: 768px) {
+    /* Prevent horizontal scroll */
+    body {
+        overflow-x: hidden;
+    }
+    
+    /* Fix hero background on mobile */
+    .hero-background {
+        background-attachment: scroll;
+    }
+    
+    /* Better spacing for sections */
+    .py-5 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+    
+    /* Card improvements */
+    .card {
+        margin-bottom: 1rem;
+    }
+    
+    /* Better button spacing */
+    .btn-lg {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    /* Fix navbar collapse */
+    .navbar-collapse {
+        margin-top: 1rem;
+    }
+    
+    /* Better text sizing */
+    .lead {
+        font-size: 1rem;
+    }
+    
+    /* Fix modal backdrop on mobile */
+    .modal-backdrop {
+        z-index: 1040;
+    }
+    
+    /* Better input sizing */
+    .form-control {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    /* Fix overflow issues */
+    .row {
+        margin-left: -0.5rem;
+        margin-right: -0.5rem;
+    }
+    
+    .row > * {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    
+    /* Better gap spacing */
+    .g-3 {
+        --bs-gutter-y: 0.75rem;
+        --bs-gutter-x: 0.75rem;
+    }
+    
+    .g-4 {
+        --bs-gutter-y: 1rem;
+        --bs-gutter-x: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Even smaller screens */
+    .container {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+    
+    /* Smaller headings */
+    h2 {
+        font-size: 1.25rem;
+    }
+    
+    h5 {
+        font-size: 1rem;
+    }
+    
+    /* Better card padding */
+    .card-body {
+        padding: 1rem;
+    }
+    
+    /* Smaller badges */
+    .badge {
+        font-size: 0.7rem;
+        padding: 0.35rem 0.5rem;
+    }
 }
 

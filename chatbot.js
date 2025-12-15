@@ -17,6 +17,7 @@ const CHATBOT_CONFIG = {
 // Speech Synthesis
 let speechSynthesis = null;
 let currentUtterance = null;
+let userSoundPreference = true; // Store user's sound preference
 
 // Offline Responses Database
 const OFFLINE_RESPONSES = {
@@ -73,8 +74,13 @@ function initChatbot() {
         updateSoundToggleIcon();
     }
     
-    // Welcome message
+    // When modal is opened - enable sound based on user preference
     chatbotModal.addEventListener('shown.bs.modal', function() {
+        // Re-enable sound when modal opens (based on user preference)
+        CHATBOT_CONFIG.soundEnabled = userSoundPreference;
+        updateSoundToggleIcon();
+        
+        // Welcome message
         if (document.getElementById('chatbotMessages').children.length === 0) {
             const welcomeMsg = 'Assalamu\'alaikum! 👋\n\nSaya Asisten AN NAMIROH Travel. Ada yang bisa saya bantu terkait paket umroh atau haji? Silakan tanyakan atau klik tombol cepat di bawah.\n\nUntuk chat langsung dengan admin, klik icon WhatsApp di header ini.';
             const welcomeSpeak = 'Assalamu\'alaikum. Saya Asisten An Namirah Travel. Ada yang bisa saya bantu terkait paket umroh atau haji? Silakan tanyakan atau klik tombol cepat di bawah. Untuk chat langsung dengan admin, klik icon WhatsApp di header ini.';
@@ -86,6 +92,17 @@ function initChatbot() {
                 }
             }, 500);
         }
+    });
+    
+    // When modal is closed - stop all sounds
+    chatbotModal.addEventListener('hidden.bs.modal', function() {
+        // Stop all speech synthesis when modal closes
+        if (speechSynthesis && speechSynthesis.speaking) {
+            speechSynthesis.cancel();
+            currentUtterance = null;
+        }
+        // Disable sound when modal is closed (but keep user preference)
+        CHATBOT_CONFIG.soundEnabled = false;
     });
     
     // Send button click
@@ -356,6 +373,7 @@ function speakMessage(text) {
 // Toggle Sound Function
 function toggleSound() {
     CHATBOT_CONFIG.soundEnabled = !CHATBOT_CONFIG.soundEnabled;
+    userSoundPreference = CHATBOT_CONFIG.soundEnabled; // Save user preference
     updateSoundToggleIcon();
     
     // Stop speech if disabled

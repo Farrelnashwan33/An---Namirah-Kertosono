@@ -1,397 +1,489 @@
-// Throttle function untuk optimasi performance
-function throttle(func, limit) {
-    let inThrottle;
-    return function() {
-        const args = arguments;
-        const context = this;
-        if (!inThrottle) {
-            func.apply(context, args);
-            inThrottle = true;
-            setTimeout(() => inThrottle = false, limit);
-        }
+// ============================================
+// AN NAMIROH Travel - Main JavaScript
+// ============================================
+
+// Data Paket Umroh
+const paketData = [
+    {
+        id: 1,
+        nama: "Paket Umroh Reguler",
+        gambar: "dokum/manazil wisam.jpg",
+        durasi: "9 Hari",
+        harga: "Rp 32.2 Jt",
+        rating: 5,
+        deskripsi: "Paket umroh reguler dengan akomodasi nyaman dan fasilitas lengkap."
+    },
+    {
+        id: 2,
+        nama: "Paket Umroh Plus",
+        gambar: "dokum/pic-amjad-al-deafah-hotel-mecca-26.jpg",
+        durasi: "12 Hari",
+        harga: "Rp 34.45 Jt",
+        rating: 5,
+        deskripsi: "Paket umroh plus dengan hotel bintang 4 dan makan buffet."
+    },
+    {
+        id: 3,
+        nama: "Paket Umroh VIP",
+        gambar: "dokum/pic-amjad-al-deafah-hotel-mecca-26.jpg",
+        durasi: "16 Hari",
+        harga: "Rp 38.3 Jt",
+        rating: 5,
+        deskripsi: "Paket umroh VIP dengan hotel bintang 5 dan pelayanan premium."
     }
-}
+];
 
-// Debounce function untuk optimasi performance
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
+// Data Galeri Foto
+const galeriData = [
+    "dokum/dokum.jpg",
+    "dokum/dokum2.jpg",
+    "dokum/dokum 3.jpg",
+    "dokum/IMG-20251211-WA0038.jpg",
+    "dokum/IMG-20251211-WA0039.jpg",
+    "dokum/IMG-20251211-WA0040.jpg",
+    "dokum/IMG-20251211-WA0041.jpg",
+    "dokum/IMG-20251211-WA0042.jpg",
+    "dokum/IMG-20251211-WA0043.jpg",
+    "dokum/IMG-20251211-WA0044.jpg",
+    "dokum/IMG-20251211-WA0045.jpg",
+    "dokum/IMG-20251211-WA0046.jpg",
+    "dokum/IMG-20251211-WA0047.jpg",
+    "dokum/IMG-20251211-WA0048.jpg",
+    "dokum/IMG-20251211-WA0049.jpg",
+    "dokum/IMG-20251211-WA0050.jpg",
+    "dokum/IMG-20251211-WA0051.jpg",
+    "dokum/IMG-20251211-WA0052.jpg",
+    "dokum/IMG-20251211-WA0053.jpg",
+    "dokum/IMG-20251211-WA0054.jpg",
+    "dokum/IMG-20251211-WA0055.jpg",
+    "dokum/IMG-20251211-WA0056.jpg",
+    "dokum/IMG-20251211-WA0057.jpg",
+    "dokum/IMG-20251211-WA0058.jpg",
+    "dokum/IMG-20251211-WA0059.jpg",
+    "dokum/IMG-20251211-WA0060.jpg",
+    "dokum/IMG-20251211-WA0061.jpg",
+    "dokum/IMG-20251211-WA0062.jpg",
+    "dokum/IMG-20251211-WA0063.jpg",
+    "dokum/IMG-20251211-WA0064.jpg",
+    "dokum/IMG-20251211-WA0065.jpg",
+    "dokum/IMG-20251211-WA0066.jpg",
+    "dokum/IMG-20251211-WA0067.jpg",
+    "dokum/IMG-20251211-WA0068.jpg",
+    "dokum/IMG-20251211-WA0069.jpg",
+    "dokum/manazil wisam.jpg",
+    "dokum/namiorh.jpg",
+    "dokum/namiroh bannerjpg.jpg",
+    "dokum/pic-amjad-al-deafah-hotel-mecca-26.jpg"
+];
 
-// Sticky Header Functionality
-const header = document.getElementById('header');
-let lastScroll = 0;
-
-const handleScroll = throttle(() => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > 100) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
+// Data Video Dokumentasi
+const videoData = [
+    {
+        type: "mp4",
+        url: "dokum/VID-20251211-WA0009.mp4",
+        title: "Dokumentasi Umroh - Video 1"
+    },
+    {
+        type: "mp4",
+        url: "dokum/VID-20251211-WA0010.mp4",
+        title: "Dokumentasi Umroh - Video 2"
+    },
+    {
+        type: "mp4",
+        url: "dokum/VID-20251211-WA0011.mp4",
+        title: "Dokumentasi Umroh - Video 3"
+    },
+    {
+        type: "mp4",
+        url: "dokum/VID-20251211-WA0012.mp4",
+        title: "Dokumentasi Umroh - Video 4"
+    },
+    {
+        type: "mp4",
+        url: "dokum/VID-20251211-WA0013.mp4",
+        title: "Dokumentasi Umroh - Video 5"
+    },
+    {
+        type: "mp4",
+        url: "dokum/VID-20251211-WA0014.mp4",
+        title: "Dokumentasi Umroh - Video 6"
+    },
+    {
+        type: "mp4",
+        url: "dokum/VID-20251211-WA0015.mp4",
+        title: "Dokumentasi Umroh - Video 7"
+    },
+    {
+        type: "mp4",
+        url: "dokum/VID-20251211-WA0016.mp4",
+        title: "Dokumentasi Umroh - Video 8"
+    },
+    {
+        type: "mp4",
+        url: "dokum/VID-20251211-WA0017.mp4",
+        title: "Dokumentasi Umroh - Video 9"
+    },
+    {
+        type: "mp4",
+        url: "dokum/VID-20251214-WA0004.mp4",
+        title: "Dokumentasi Umroh - Video 10"
+    },
+    {
+        type: "mp4",
+        url: "dokum/VID-20251214-WA0005.mp4",
+        title: "Dokumentasi Umroh - Video 11"
+    },
+    {
+        type: "mp4",
+        url: "dokum/VID-20251214-WA0006.mp4",
+        title: "Dokumentasi Umroh - Video 12"
+    },
+    {
+        type: "mp4",
+        url: "dokum/VID-20251214-WA0007.mp4",
+        title: "Dokumentasi Umroh - Video 13"
+    },
+    {
+        type: "mp4",
+        url: "dokum/VID-20251214-WA0008.mp4",
+        title: "Dokumentasi Umroh - Video 14"
+    },
+    {
+        type: "mp4",
+        url: "dokum/VID-20251214-WA0009.mp4",
+        title: "Dokumentasi Umroh - Video 15"
+    },
+    {
+        type: "mp4",
+        url: "dokum/VID-20251214-WA0010.mp4",
+        title: "Dokumentasi Umroh - Video 16"
+    },
+    {
+        type: "mp4",
+        url: "dokum/VID-20251214-WA0011.mp4",
+        title: "Dokumentasi Umroh - Video 17"
+    },
+    {
+        type: "mp4",
+        url: "dokum/VID-20251214-WA0012.mp4",
+        title: "Dokumentasi Umroh - Video 18"
+    },
+    {
+        type: "mp4",
+        url: "dokum/VID-20251214-WA0013.mp4",
+        title: "Dokumentasi Umroh - Video 19"
+    },
+    {
+        type: "mp4",
+        url: "dokum/VID-20251214-WA0014.mp4",
+        title: "Dokumentasi Umroh - Video 20"
     }
-    
-    lastScroll = currentScroll;
-}, 16); // ~60fps
+];
 
-window.addEventListener('scroll', handleScroll, { passive: true });
+// Data Testimoni
+const testimoniData = [
+    {
+        nama: "Ahmad Hidayat",
+        foto: "https://i.pravatar.cc/150?img=1",
+        rating: 5,
+        komentar: "Pelayanan sangat memuaskan, akomodasi nyaman, dan tim sangat profesional. Alhamdulillah perjalanan umroh kami berjalan lancar."
+    },
+    {
+        nama: "Siti Nurhaliza",
+        foto: "https://i.pravatar.cc/150?img=5",
+        rating: 5,
+        komentar: "Terima kasih AN NAMIROH, perjalanan haji kami sangat berkesan. Semua fasilitas sesuai dengan yang dijanjikan."
+    },
+    {
+        nama: "Budi Santoso",
+        foto: "https://i.pravatar.cc/150?img=12",
+        rating: 5,
+        komentar: "Paket lengkap, harga terjangkau, dan pelayanan ramah. Recommended untuk yang ingin umroh atau haji."
+    }
+];
 
-// Smooth Scrolling for Anchor Links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
+// Initialize on DOM Load
+document.addEventListener('DOMContentLoaded', function() {
+    initNavbar();
+    loadPaket();
+    loadGaleri();
+    loadVideo();
+    loadTestimoni();
+    initLazyLoading();
+    initSmoothScroll();
 });
 
-// Lazy loading untuk testimonial images (optimized)
-function initTestimonialLazyLoad() {
-    const testimonialImages = document.querySelectorAll('.testimonial-image');
+// Navbar Scroll Effect
+function initNavbar() {
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+}
+
+// Load Paket Cards
+function loadPaket() {
+    const container = document.getElementById('paketContainer');
     
-    if ('IntersectionObserver' in window && testimonialImages.length > 0) {
+    paketData.forEach(paket => {
+        const card = document.createElement('div');
+        card.className = 'col-md-4';
+        card.innerHTML = `
+            <div class="card paket-card shadow-sm h-100">
+                <div class="position-relative">
+                    <img src="${paket.gambar}" 
+                         class="card-img-top" 
+                         alt="${paket.nama}"
+                         loading="lazy">
+                    <span class="badge bg-warning position-absolute top-0 end-0 m-2">${paket.durasi}</span>
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">${paket.nama}</h5>
+                    <p class="card-text text-muted small">${paket.deskripsi}</p>
+                    <div class="rating mb-2">
+                        ${'<i class="bi bi-star-fill"></i>'.repeat(paket.rating)}
+                    </div>
+                    <div class="mt-auto">
+                        <p class="fw-bold text-primary mb-2">${paket.harga}</p>
+                        <button class="btn btn-primary w-100" 
+                                data-bs-toggle="modal" 
+                                data-bs-target="#paketModal${paket.id}">
+                            <i class="bi bi-info-circle"></i> Detail
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
+        container.appendChild(card);
+        
+        // Create Modal for each paket
+        createPaketModal(paket);
+    });
+}
+
+// Create Paket Modal
+function createPaketModal(paket) {
+    const modal = document.createElement('div');
+    modal.className = 'modal fade';
+    modal.id = `paketModal${paket.id}`;
+    modal.innerHTML = `
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">${paket.nama}</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="${paket.gambar}" class="img-fluid rounded mb-3" alt="${paket.nama}">
+                    <p><strong>Durasi:</strong> ${paket.durasi}</p>
+                    <p><strong>Harga:</strong> ${paket.harga}</p>
+                    <p>${paket.deskripsi}</p>
+                    <hr>
+                    <h6>Fasilitas:</h6>
+                    <ul>
+                        <li>Tiket pesawat pulang pergi</li>
+                        <li>Visa Umroh</li>
+                        <li>Hotel bintang 3-4</li>
+                        <li>Makan 3x sehari</li>
+                        <li>Transportasi AC</li>
+                        <li>Guide berpengalaman</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                    <a href="https://wa.me/6281259673929?text=Halo,%20saya%20tertarik%20dengan%20${encodeURIComponent(paket.nama)}" 
+                       class="btn btn-success" 
+                       target="_blank">
+                        <i class="bi bi-whatsapp"></i> Hubungi via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(modal);
+}
+
+// Load Galeri
+function loadGaleri() {
+    const container = document.getElementById('galeriContainer');
+    
+    galeriData.forEach((url, index) => {
+        const col = document.createElement('div');
+        col.className = 'col-md-4 col-sm-6';
+        col.innerHTML = `
+            <div class="galeri-item" data-bs-toggle="modal" data-bs-target="#galeriModal" data-image="${url}">
+                <img src="${url}" 
+                     alt="Galeri ${index + 1}" 
+                     class="img-fluid"
+                     loading="lazy">
+            </div>
+        `;
+        container.appendChild(col);
+    });
+    
+    // Create Galeri Modal
+    createGaleriModal();
+}
+
+// Create Galeri Modal
+function createGaleriModal() {
+    const modal = document.createElement('div');
+    modal.className = 'modal fade';
+    modal.id = 'galeriModal';
+    modal.innerHTML = `
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center p-0">
+                    <img id="galeriModalImage" src="" class="img-fluid" alt="Galeri">
+                </div>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(modal);
+    
+    // Event listener for galeri items
+    document.querySelectorAll('.galeri-item').forEach(item => {
+        item.addEventListener('click', function() {
+            const imageUrl = this.getAttribute('data-image');
+            document.getElementById('galeriModalImage').src = imageUrl;
+        });
+    });
+}
+
+// Load Video
+function loadVideo() {
+    const container = document.getElementById('videoContainer');
+    
+    videoData.forEach((video, index) => {
+        const col = document.createElement('div');
+        col.className = 'col-md-4';
+        
+        let videoHtml = '';
+        if (video.type === 'youtube') {
+            videoHtml = `
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/${video.id}" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+                <h6 class="mt-2">${video.title}</h6>
+            `;
+        } else if (video.type === 'mp4') {
+            videoHtml = `
+                <div class="video-wrapper">
+                    <video controls class="w-100 h-100">
+                        <source src="${video.url}" type="video/mp4">
+                        Browser Anda tidak mendukung video.
+                    </video>
+                </div>
+                <h6 class="mt-2">${video.title}</h6>
+            `;
+        }
+        
+        col.innerHTML = videoHtml;
+        container.appendChild(col);
+    });
+}
+
+// Load Testimoni
+function loadTestimoni() {
+    const container = document.getElementById('testimoniContainer');
+    
+    testimoniData.forEach(testimoni => {
+        const col = document.createElement('div');
+        col.className = 'col-md-4';
+        col.innerHTML = `
+            <div class="card testimoni-card shadow-sm h-100">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="${testimoni.foto}" 
+                             alt="${testimoni.nama}" 
+                             class="testimoni-avatar me-3"
+                             loading="lazy">
+                        <div>
+                            <h6 class="mb-0">${testimoni.nama}</h6>
+                            <div class="text-warning">
+                                ${'<i class="bi bi-star-fill"></i>'.repeat(testimoni.rating)}
+                            </div>
+                        </div>
+                    </div>
+                    <p class="card-text">"${testimoni.komentar}"</p>
+                </div>
+            </div>
+        `;
+        container.appendChild(col);
+    });
+}
+
+// Lazy Loading Images
+function initLazyLoading() {
+    const images = document.querySelectorAll('img[loading="lazy"]');
+    
+    if ('IntersectionObserver' in window) {
         const imageObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const img = entry.target;
-                    if (img.dataset.src) {
-                        img.src = img.dataset.src;
-                        img.removeAttribute('data-src');
-                    }
                     img.classList.add('loaded');
                     observer.unobserve(img);
                 }
             });
-        }, {
-            rootMargin: '50px'
         });
         
-        testimonialImages.forEach(img => {
-            imageObserver.observe(img);
-        });
+        images.forEach(img => imageObserver.observe(img));
+    } else {
+        // Fallback for older browsers
+        images.forEach(img => img.classList.add('loaded'));
     }
 }
 
-// Initialize testimonial lazy loading
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initTestimonialLazyLoad);
-} else {
-    initTestimonialLazyLoad();
-}
-
-// WhatsApp CTA Button Enhancement
-const ctaButton = document.querySelector('.cta-button');
-
-if (ctaButton) {
-    // Add click tracking (optional - can be used for analytics)
-    ctaButton.addEventListener('click', function(e) {
-        // The link will handle navigation, but we can add analytics here if needed
-        console.log('CTA button clicked - redirecting to WhatsApp');
-    });
-}
-
-// Testimonial gallery click untuk lightbox (optional enhancement)
-function initTestimonialLightbox() {
-    const testimonialItems = document.querySelectorAll('.testimonial-item');
-    
-    testimonialItems.forEach(item => {
-        item.addEventListener('click', function() {
-            const img = this.querySelector('.testimonial-image');
-            if (img) {
-                // Bisa ditambahkan lightbox modal di sini jika diperlukan
-                // Untuk sekarang, hanya console log
-                console.log('Testimonial image clicked:', img.src);
+// Smooth Scroll
+function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
             }
         });
     });
 }
 
-// Initialize testimonial lightbox
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initTestimonialLightbox);
-} else {
-    initTestimonialLightbox();
-}
-
-// Add animation on scroll (optimized untuk smooth)
-function animateOnScroll() {
-    const elements = document.querySelectorAll('.pricing-card, .inclusions-box, .exclusions-box');
+// Show Toast Notification
+function showToast(message, type = 'info') {
+    const toastContainer = document.querySelector('.toast-container');
+    const toast = document.createElement('div');
+    toast.className = `toast align-items-center text-white bg-${type} border-0`;
+    toast.setAttribute('role', 'alert');
+    toast.innerHTML = `
+        <div class="d-flex">
+            <div class="toast-body">${message}</div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+        </div>
+    `;
+    toastContainer.appendChild(toast);
     
-    if ('IntersectionObserver' in window && elements.length > 0) {
-        // Set initial state dengan CSS class untuk menghindari FOUC
-        elements.forEach(element => {
-            element.classList.add('fade-in-up');
-        });
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    requestAnimationFrame(() => {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    });
-                }
-            });
-        }, {
-            threshold: 0.1,
-            rootMargin: '50px'
-        });
-        
-        elements.forEach(element => {
-            observer.observe(element);
-        });
-    }
-}
-
-// Initialize scroll animations setelah DOM ready
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', animateOnScroll);
-} else {
-    animateOnScroll();
-}
-
-// Form validation (if contact form is added later)
-function validateForm(form) {
-    const inputs = form.querySelectorAll('input[required], textarea[required]');
-    let isValid = true;
+    const bsToast = new bootstrap.Toast(toast);
+    bsToast.show();
     
-    inputs.forEach(input => {
-        if (!input.value.trim()) {
-            isValid = false;
-            input.classList.add('error');
-        } else {
-            input.classList.remove('error');
-        }
+    toast.addEventListener('hidden.bs.toast', () => {
+        toast.remove();
     });
-    
-    return isValid;
 }
 
-// Image Slider Functionality
-function initSlider() {
-    const slides = document.querySelectorAll('.slide');
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
-    const dotsContainer = document.querySelector('.slider-dots');
-    let currentSlide = 0;
-    let autoSlideInterval;
-
-    // Create dots indicator
-    slides.forEach((_, index) => {
-        const dot = document.createElement('div');
-        dot.classList.add('slider-dot');
-        if (index === 0) dot.classList.add('active');
-        dot.addEventListener('click', () => goToSlide(index));
-        dotsContainer.appendChild(dot);
-    });
-
-    const dots = document.querySelectorAll('.slider-dot');
-
-    // Function to update slide (optimized dengan requestAnimationFrame)
-    function updateSlide() {
-        requestAnimationFrame(() => {
-            slides.forEach((slide, index) => {
-                slide.classList.remove('active');
-                if (dots[index]) {
-                    dots[index].classList.remove('active');
-                }
-            });
-
-            if (slides[currentSlide]) {
-                slides[currentSlide].classList.add('active');
-            }
-            if (dots[currentSlide]) {
-                dots[currentSlide].classList.add('active');
-            }
-        });
-    }
-
-    // Function to go to specific slide
-    function goToSlide(index) {
-        currentSlide = index;
-        if (currentSlide < 0) currentSlide = slides.length - 1;
-        if (currentSlide >= slides.length) currentSlide = 0;
-        updateSlide();
-        resetAutoSlide();
-    }
-
-    // Next slide
-    function nextSlide() {
-        currentSlide++;
-        if (currentSlide >= slides.length) currentSlide = 0;
-        updateSlide();
-        resetAutoSlide();
-    }
-
-    // Previous slide
-    function prevSlide() {
-        currentSlide--;
-        if (currentSlide < 0) currentSlide = slides.length - 1;
-        updateSlide();
-        resetAutoSlide();
-    }
-
-    // Auto slide functionality (optimized)
-    function startAutoSlide() {
-        if (autoSlideInterval) {
-            clearInterval(autoSlideInterval);
-        }
-        autoSlideInterval = setInterval(() => {
-            requestAnimationFrame(nextSlide);
-        }, 5000); // Change slide every 5 seconds
-    }
-
-    function resetAutoSlide() {
-        clearInterval(autoSlideInterval);
-        startAutoSlide();
-    }
-
-    // Event listeners
-    if (nextBtn) nextBtn.addEventListener('click', nextSlide);
-    if (prevBtn) prevBtn.addEventListener('click', prevSlide);
-
-    // Keyboard navigation
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft') prevSlide();
-        if (e.key === 'ArrowRight') nextSlide();
-    });
-
-    // Touch/swipe support for mobile
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    const sliderContainer = document.querySelector('.slider-container');
-    if (sliderContainer) {
-        sliderContainer.addEventListener('touchstart', (e) => {
-            touchStartX = e.changedTouches[0].screenX;
-        });
-
-        sliderContainer.addEventListener('touchend', (e) => {
-            touchEndX = e.changedTouches[0].screenX;
-            handleSwipe();
-        });
-
-        function handleSwipe() {
-            if (touchEndX < touchStartX - 50) {
-                nextSlide(); // Swipe left - next
-            }
-            if (touchEndX > touchStartX + 50) {
-                prevSlide(); // Swipe right - previous
-            }
-        }
-    }
-
-    // Start auto slide
-    startAutoSlide();
-
-    // Pause on hover
-    const heroSlider = document.querySelector('.hero-slider');
-    if (heroSlider) {
-        heroSlider.addEventListener('mouseenter', () => {
-            clearInterval(autoSlideInterval);
-        });
-        heroSlider.addEventListener('mouseleave', () => {
-            startAutoSlide();
-        });
-    }
-}
-
-// Initialize slider when DOM is loaded (optimized)
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initSlider);
-} else {
-    // DOM already loaded
-    initSlider();
-}
-
-// Add loaded class to body untuk prevent FOUC
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
-        document.body.classList.add('loaded');
-    });
-} else {
-    document.body.classList.add('loaded');
-}
-
-// Dark Mode Toggle Functionality
-function initThemeToggle() {
-    const themeToggle = document.getElementById('themeToggle');
-    const html = document.documentElement;
-    
-    // Check for saved theme preference or default to light mode
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    html.setAttribute('data-theme', savedTheme);
-    
-    // Update toggle button state
-    function updateToggleState(theme) {
-        if (theme === 'dark') {
-            html.setAttribute('data-theme', 'dark');
-        } else {
-            html.removeAttribute('data-theme');
-        }
-    }
-    
-    // Toggle theme function (optimized untuk smooth transition)
-    function toggleTheme() {
-        const currentTheme = html.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
-        // Prevent multiple rapid clicks
-        if (html.classList.contains('theme-transitioning')) {
-            return;
-        }
-        
-        // Add animation class for smooth transition
-        html.classList.add('theme-transitioning');
-        
-        requestAnimationFrame(() => {
-            updateToggleState(newTheme);
-            localStorage.setItem('theme', newTheme);
-            
-            setTimeout(() => {
-                html.classList.remove('theme-transitioning');
-            }, 300);
-        });
-    }
-    
-    // Event listener for toggle button
-    if (themeToggle) {
-        themeToggle.addEventListener('click', toggleTheme);
-    }
-    
-    // Listen for system theme changes (optional)
-    if (window.matchMedia) {
-        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-        
-        // Only apply system preference if user hasn't set a preference
-        if (!localStorage.getItem('theme')) {
-            mediaQuery.addEventListener('change', (e) => {
-                if (!localStorage.getItem('theme')) {
-                    updateToggleState(e.matches ? 'dark' : 'light');
-                }
-            });
-        }
-    }
-}
-
-// Initialize theme toggle when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    initThemeToggle();
-});
-
-// Console message for developers
-console.log('%cAn Namirah Travelindo', 'color: #2563eb; font-size: 20px; font-weight: bold;');
-console.log('%cUmroh Spesial Desember 2025', 'color: #f59e0b; font-size: 14px;');
+// Export functions for chatbot
+window.showToast = showToast;
 

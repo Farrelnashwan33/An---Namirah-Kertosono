@@ -3,336 +3,358 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Umroh Spesial Desember 2025 - An Namirah Travelindo. Menggapai Berkah di Tanah Suci dengan program 16 hari.">
-    <title>Umroh Spesial Desember 2025 - An Namirah Travelindo</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="AN NAMIROH Travel Umroh & Haji - Melayani perjalanan ibadah umroh dan haji dengan profesional dan terpercaya">
+    <title>AN NAMIROH Travel Umroh & Haji</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Google Fonts - Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header" id="header">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm" id="navbar">
         <div class="container">
-            <div class="header-content">
-                <div class="logo-section">
-                    <h1 class="logo">AN NAMIROH TRAVELINDO</h1>
-                    <p class="slogan">Spirit of Umroh & Hajj</p>
-                </div>
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-                    <span class="theme-icon">
-                        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="5"></circle>
-                            <line x1="12" y1="1" x2="12" y2="3"></line>
-                            <line x1="12" y1="21" x2="12" y2="23"></line>
-                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                            <line x1="1" y1="12" x2="3" y2="12"></line>
-                            <line x1="21" y1="12" x2="23" y2="12"></line>
-                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                        </svg>
-                        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                        </svg>
-                    </span>
-                </button>
+            <a class="navbar-brand fw-bold text-primary" href="#beranda">
+                <i class="bi bi-building"></i> AN NAMIROH
+                <small class="d-block small text-muted">Travel Umroh & Haji</small>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#beranda">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#umroh">Umroh</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#haji">Haji</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#paket">Paket</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#galeri">Galeri</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimoni">Testimoni</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tentang">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#kontak">Kontak</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-primary btn-sm" href="https://wa.me/6281259673929" target="_blank" rel="noopener">
+                            <i class="bi bi-whatsapp"></i> Hubungi Sekarang
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </header>
+    </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <!-- Image Slider -->
-        <div class="hero-slider">
-            <div class="slider-container">
-                <div class="slide active">
-                    <img src="dokum/manazil wisam.jpg" alt="Hotel Manazil Wism Makkah">
-                </div>
-                <div class="slide">
-                    <img src="dokum/pic-amjad-al-deafah-hotel-mecca-26.jpg" alt="Amjad Hotel Madinah">
-                </div>
-                <div class="slide">
-                    <img src="dokum/dokum.jpg" alt="Ka'bah Makkah">
-                </div>
-                <div class="slide">
-                    <img src="dokum/dokum 3.jpg" alt="Masjid Nabawi Madinah">
-                </div>
-            </div>
-            <!-- Navigation Buttons -->
-            <button class="slider-btn prev-btn" aria-label="Previous slide">‹</button>
-            <button class="slider-btn next-btn" aria-label="Next slide">›</button>
-            <!-- Dots Indicator -->
-            <div class="slider-dots"></div>
-        </div>
-        
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">UMROH SPESIAL DESEMBER</h1>
-                <h2 class="hero-subtitle">MENGGAPAI BERKAH DI TANAH SUCI</h2>
-                
-                <div class="hero-info">
-                    <div class="info-item">
-                        <span class="info-label">Tanggal Keberangkatan</span>
-                        <span class="info-value">20 Desember 2025</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Program</span>
-                        <span class="info-value">16 Hari</span>
-                    </div>
-                </div>
-
-                <div class="flight-info">
-                    <p class="flight-text">
-                        <strong>Garuda Indonesia</strong> - Start <strong>SURABAYA</strong>
+    <section id="beranda" class="hero-section position-relative overflow-hidden">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        <div class="container position-relative" style="z-index: 2;">
+            <div class="row min-vh-100 align-items-center text-center text-white">
+                <div class="col-lg-8 mx-auto">
+                    <h1 class="display-3 fw-bold mb-4 animate-fade-in">
+                        MENUJU UMROH & HAJI<br>
+                        BERSAMA AN NAMIROH
+                    </h1>
+                    <p class="lead mb-5 animate-fade-in-delay">
+                        Melayani perjalanan ibadah umroh dan haji dengan profesional, aman, dan nyaman
                     </p>
-                </div>
-
-                <a href="https://wa.me/62812567392?text=Halo%20Bapak%20Irjik%20Indra%20Gunawan%20S.Sos,%20saya%20tertarik%20untuk%20mendaftar%20Umroh%20Spesial%20Desember%202025" 
-                   class="cta-button" target="_blank" rel="noopener noreferrer">
-                    DAFTAR SEKARANG
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Package Details Section -->
-    <section class="package-details" id="package">
-        <div class="container">
-            <h2 class="section-title">PAKET UMROH SPESIAL DESEMBER</h2>
-            
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3 class="pricing-type">QUAD</h3>
-                    </div>
-                    <div class="pricing-amount">
-                        <span class="currency">Rp</span>
-                        <span class="amount">32.2 Jt</span>
-                    </div>
-                    <p class="pricing-note">per orang</p>
-                </div>
-
-                <div class="pricing-card featured">
-                    <div class="pricing-badge">POPULER</div>
-                    <div class="pricing-header">
-                        <h3 class="pricing-type">TRIPLE</h3>
-                    </div>
-                    <div class="pricing-amount">
-                        <span class="currency">Rp</span>
-                        <span class="amount">34.45 JT</span>
-                    </div>
-                    <p class="pricing-note">per orang</p>
-                </div>
-
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3 class="pricing-type">DOUBLE</h3>
-                    </div>
-                    <div class="pricing-amount">
-                        <span class="currency">Rp</span>
-                        <span class="amount">38.3 JT</span>
-                    </div>
-                    <p class="pricing-note">per orang</p>
-                </div>
-            </div>
-
-            <div class="accommodation-info">
-                <h3 class="accommodation-title">Akomodasi</h3>
-                <div class="accommodation-grid">
-                    <div class="accommodation-item">
-                        <img src="dokum/manazil wisam.jpg" alt="Hotel Manazil Wism di Makkah" class="accommodation-photo" style="width:100%;max-width:180px;border-radius:8px;margin-bottom:8px;">
-                        <h4>Hotel Makkah</h4>
-                        <p>Manazil Wism</p>
-                    </div>
-                    <div class="accommodation-item">
-                        <img src="dokum/pic-amjad-al-deafah-hotel-mecca-26.jpg" alt="Amjad Hotel di Madinah" class="accommodation-photo" style="width:100%;max-width:180px;border-radius:8px;margin-bottom:8px;">
-                        <h4>Hotel Madinah</h4>
-                        <p>Amjad Hotel</p>
+                    <div class="d-flex gap-3 justify-content-center flex-wrap animate-fade-in-delay-2">
+                        <a href="#paket" class="btn btn-warning btn-lg px-5">
+                            <i class="bi bi-calendar-check"></i> Daftar Sekarang
+                        </a>
+                        <a href="#paket" class="btn btn-outline-light btn-lg px-5">
+                            <i class="bi bi-box-seam"></i> Lihat Paket
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="scroll-indicator position-absolute bottom-0 start-50 translate-middle-x mb-4" style="z-index: 2;">
+            <i class="bi bi-chevron-down text-white fs-4 animate-bounce"></i>
+        </div>
     </section>
 
-    <!-- Inclusions & Exclusions Section -->
-    <section class="inclusions-exclusions">
+    <!-- Tentang Kami -->
+    <section id="tentang" class="py-5">
         <div class="container">
-            <div class="inclusions-grid">
-                <div class="inclusions-box">
-                    <h3 class="box-title">INKLUSI</h3>
-                    <ul class="inclusions-list">
-                        <li>Tiket pesawat pulang pergi kelas ekonomi</li>
-                        <li>Visa Umroh</li>
-                        <li>Hotel bintang 3-4 di Makkah & Madinah</li>
-                        <li>Makan 3x sehari (buffet)</li>
-                        <li>Transportasi AC selama di Arab Saudi</li>
-                        <li>Zamzam 5 liter per jamaah</li>
-                        <li>Muthawif/Guide berpengalaman</li>
-                        <li>Dokumentasi foto & video</li>
-                        <li>Tips hotel & restoran</li>
-                        <li>Asuransi perjalanan</li>
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="dokum/IMG-20251211-WA0045.jpg" 
+                         alt="Tentang AN NAMIROH" 
+                         class="img-fluid rounded shadow-lg"
+                         loading="lazy">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4 text-primary">
+                        <i class="bi bi-info-circle"></i> Tentang Kami
+                    </h2>
+                    <p class="lead">
+                        <strong>AN NAMIROH Travel Umroh & Haji</strong> adalah biro perjalanan terpercaya yang telah melayani jamaah umroh dan haji dengan dedikasi tinggi.
+                    </p>
+                    <p>
+                        Kami berkomitmen memberikan pelayanan terbaik dengan paket lengkap, akomodasi nyaman, dan bimbingan ibadah yang profesional. Setiap perjalanan ibadah Anda adalah prioritas kami.
+                    </p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success"></i> Biro Travel Terpercaya</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success"></i> Paket Lengkap & Transparan</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success"></i> Tim Profesional & Berpengalaman</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success"></i> Layanan 24/7</li>
                     </ul>
-                </div>
-
-                <div class="exclusions-box">
-                    <h3 class="box-title">EKSKLUSI</h3>
-                    <ul class="exclusions-list">
-                        <li>Passport & perpanjangan passport</li>
-                        <li>Biaya kelebihan bagasi</li>
-                        <li>Pengeluaran pribadi</li>
-                        <li>Tips untuk guide (sukarela)</li>
-                        <li>Biaya tambahan jika terjadi force majeure</li>
-                    </ul>
+                    <a href="https://wa.me/6281259673929" class="btn btn-primary mt-3" target="_blank">
+                        <i class="bi bi-whatsapp"></i> Hubungi Kami
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Banner Iklan Portrait -->
-    <section class="banner-ad-section">
+    <!-- Paket Umroh -->
+    <section id="paket" class="py-5 bg-light">
         <div class="container">
-            <div class="banner-ad-wrapper">
-                <div class="banner-ad-portrait">
-                    <img src="dokum/namiroh bannerjpg.jpg" alt="Banner An Namirah Travelindo" class="banner-ad-image">
-                    <div class="banner-ad-overlay">
-                        <div class="banner-ad-content">
-                            <a href="https://wa.me/62812567392?text=Halo%20Bapak%20Irjik%20Indra%20Gunawan%20S.Sos,%20saya%20tertarik%20untuk%20mendaftar%20Umroh%20Spesial%20Desember%202025" 
-                               target="_blank" 
-                               rel="noopener noreferrer"
-                               class="banner-ad-button">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="whatsapp-icon-small">
-                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                                </svg>
-                                <span>PESAN TIKET UMROH</span>
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-primary mb-3">
+                    <i class="bi bi-box-seam"></i> Paket Umroh Spesial
+                </h2>
+                <p class="text-muted">Pilih paket yang sesuai dengan kebutuhan Anda</p>
+            </div>
+            <div class="row g-4" id="paketContainer">
+                <!-- Paket akan dimuat via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeri Foto -->
+    <section id="galeri" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-primary mb-3">
+                    <i class="bi bi-images"></i> Galeri Dokumentasi
+                </h2>
+                <p class="text-muted">Momen berharga perjalanan ibadah jamaah kami</p>
+            </div>
+            <div class="row g-3" id="galeriContainer">
+                <!-- Galeri akan dimuat via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Dokumentasi -->
+    <section id="video" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-primary mb-3">
+                    <i class="bi bi-play-circle"></i> Dokumentasi Perjalanan Umroh
+                </h2>
+                <p class="text-muted">Video dokumentasi perjalanan ibadah jamaah kami</p>
+            </div>
+            <div class="row g-4" id="videoContainer">
+                <!-- Video akan dimuat via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimoni -->
+    <section id="testimoni" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-primary mb-3">
+                    <i class="bi bi-star-fill"></i> Testimoni Jamaah
+                </h2>
+                <p class="text-muted">Apa kata jamaah tentang perjalanan bersama kami</p>
+            </div>
+            <div class="row g-4" id="testimoniContainer">
+                <!-- Testimoni akan dimuat via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak Section -->
+    <section id="kontak" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-primary mb-3">
+                    <i class="bi bi-telephone"></i> Hubungi Kami
+                </h2>
+                <p class="text-muted">Kami siap membantu perjalanan ibadah Anda</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary mb-4">
+                                <i class="bi bi-geo-alt-fill"></i> Alamat
+                            </h5>
+                            <p class="card-text fs-5 mb-4">
+                                <strong>Jl. Bengkoang No. 28 Kertosono</strong>
+                            </p>
+                            <hr>
+                            <h5 class="card-title text-primary mb-4">
+                                <i class="bi bi-telephone-fill"></i> Kontak
+                            </h5>
+                            <p class="card-text mb-2">
+                                <strong>No. HP:</strong> <a href="tel:081259673929" class="text-decoration-none">0812-5967-3929</a>
+                            </p>
+                            <p class="card-text mb-4">
+                                <strong>Marketing:</strong> Bapak Irjik Indra Gunawan
+                            </p>
+                            <a href="https://wa.me/6281259673929" class="btn btn-success btn-lg w-100" target="_blank">
+                                <i class="bi bi-whatsapp"></i> Klik WhatsApp
                             </a>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonial Photo Gallery Section -->
-    <section class="testimonial-section">
-        <div class="container">
-            <h2 class="section-title">SIMAK TESTIMONI JAMAAH KAMI</h2>
-            <p class="testimonial-subtitle">Foto-foto jamaah yang telah melakukan umroh bersama An Namirah Travelindo</p>
-            
-            <div class="testimonial-gallery">
-                <div class="testimonial-item">
-                    <img src="dokum/dokum.jpg" alt="Testimoni Jamaah Umroh An Namirah Travelindo" class="testimonial-image">
-                    <div class="testimonial-overlay">
-                        <p class="testimonial-caption">Jamaah Umroh An Namirah Travelindo</p>
+                <div class="col-lg-6">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body p-0">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.234567890123!2d112.1234567890123!3d-7.890123456789012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNTMnMjQuNSJTIDExMsKwMDcnMjQuNSJF!5e0!3m2!1sid!2sid!4v1234567890123!5m2!1sid!2sid" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0; min-height: 400px;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="testimonial-item">
-                    <img src="dokum/dokum2.jpg" alt="Testimoni Jamaah Umroh An Namirah Travelindo" class="testimonial-image">
-                    <div class="testimonial-overlay">
-                        <p class="testimonial-caption">Jamaah Umroh An Namirah Travelindo</p>
-                    </div>
-                </div>
-                
-                <div class="testimonial-item">
-                    <img src="dokum/dokum 3.jpg" alt="Testimoni Jamaah Umroh An Namirah Travelindo" class="testimonial-image">
-                    <div class="testimonial-overlay">
-                        <p class="testimonial-caption">Jamaah Umroh An Namirah Travelindo</p>
-                    </div>
-                </div>
-                
-                <div class="testimonial-item">
-                    <img src="dokum/manazil wisam.jpg" alt="Hotel Manazil Wism - Akomodasi Umroh" class="testimonial-image">
-                    <div class="testimonial-overlay">
-                        <p class="testimonial-caption">Hotel Manazil Wism Makkah</p>
-                    </div>
-                </div>
-                
-                <div class="testimonial-item">
-                    <img src="dokum/pic-amjad-al-deafah-hotel-mecca-26.jpg" alt="Amjad Hotel - Akomodasi Umroh" class="testimonial-image">
-                    <div class="testimonial-overlay">
-                        <p class="testimonial-caption">Amjad Hotel Madinah</p>
-                    </div>
-                </div>
-                <div class="testimonial-item">
-                    <img src="dokum/namiorh.jpg" alt="Amjad Hotel - Akomodasi Umroh" class="testimonial-image">
-                    <div class="testimonial-overlay">
-                        <p class="testimonial-caption">Jamaah Umroh An Namirah Travelindo</p>
-                    </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="bg-dark text-white py-5">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3 class="footer-logo">AN NAMIROH TRAVELINDO</h3>
-                    <p class="footer-slogan">Spirit of Umroh & Hajj</p>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">AN NAMIROH</h5>
+                    <p>Travel Umroh & Haji terpercaya yang melayani perjalanan ibadah dengan profesional dan penuh dedikasi.</p>
                 </div>
-
-                <div class="footer-section">
-                    <h4>Mitra Kami</h4>
-                    <div class="partner-logos">
-                        <div class="partner-logo">Garuda Indonesia</div>
-                        <div class="partner-logo">Biro Travel Akreditasi A</div>
-                    </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">Kontak</h5>
+                    <p><i class="bi bi-telephone"></i> 0812-5967-3929</p>
+                    <p><i class="bi bi-geo-alt"></i> Jl. Bengkoang No. 28 Kertosono</p>
+                    <p><i class="bi bi-person"></i> Bapak Irjik Indra Gunawan</p>
                 </div>
-
-                <div class="footer-section">
-                    <h4>Informasi Update</h4>
-                    <p>Informasi dapat berubah sewaktu-waktu sesuai dengan kebijakan maskapai dan hotel.</p>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Kontak & Alamat</h4>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-icon">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                <circle cx="12" cy="10" r="3"></circle>
-                            </svg>
-                            <p class="contact-text">Jl. Bengkoang No. 28 Kertosono</p>
-                        </div>
-                        <div class="contact-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-icon">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                            </svg>
-                            <a href="tel:08125967392" class="contact-text contact-link">081259673929 (Bapak Irjik Indra Gunawan)</a>
-                        </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">Ikuti Kami</h5>
+                    <div class="d-flex gap-3">
+                        <a href="https://www.instagram.com" class="text-white fs-4" target="_blank" title="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com" class="text-white fs-4" target="_blank" title="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://www.youtube.com" class="text-white fs-4" target="_blank" title="YouTube">
+                            <i class="bi bi-youtube"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-
-            <div class="footer-bottom">
-                <p class="accreditation">
-                    <strong>Biro Travel Akreditasi A</strong> - Terpercaya dan Berpengalaman
-                </p>
-                <p class="disclaimer">
-                    *Harga dapat berubah sewaktu-waktu tanpa pemberitahuan sebelumnya. 
-                    Konfirmasi harga berlaku setelah pembayaran DP.
-                </p>
-                <p class="watermark">
-                    Design by <strong>Farrel Creative Studio</strong>
-                </p>
+            <hr class="my-4 bg-light">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 AN NAMIROH Travel Umroh & Haji. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/62812567392?text=Halo%20Bapak%20Irjik%20Indra%20Gunawan%20S.Sos,%20saya%20tertarik%20untuk%20mendaftar%20Umroh%20Spesial%20Desember%202025" 
-       class="whatsapp-float" 
-       target="_blank" 
-       rel="noopener noreferrer"
-       aria-label="Hubungi WhatsApp">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="whatsapp-icon">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-        </svg>
-        <span class="whatsapp-tooltip">Hubungi WhatsApp</span>
-    </a>
+    <!-- Chatbot Button -->
+    <button class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-4 shadow-lg chatbot-btn" 
+            id="chatbotToggle" 
+            style="width: 60px; height: 60px; z-index: 1000;"
+            data-bs-toggle="modal" 
+            data-bs-target="#chatbotModal">
+        <i class="bi bi-chat-dots fs-4"></i>
+    </button>
 
+    <!-- Chatbot Modal -->
+    <div class="modal fade" id="chatbotModal" tabindex="-1" aria-labelledby="chatbotModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <div class="d-flex align-items-center w-100">
+                        <div class="chatbot-avatar me-3">
+                            <i class="bi bi-robot fs-4"></i>
+                        </div>
+                        <h5 class="modal-title flex-grow-1" id="chatbotModalLabel">
+                            An Namiroh Assistant
+                        </h5>
+                        <button type="button" 
+                                class="btn btn-sm btn-outline-light me-2" 
+                                id="soundToggle"
+                                title="Aktifkan/Nonaktifkan suara">
+                            <i class="bi bi-volume-up-fill"></i>
+                        </button>
+                        <a href="https://wa.me/6281259673929" 
+                           class="btn btn-sm btn-success me-2" 
+                           target="_blank"
+                           title="Hubungi via WhatsApp">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="modal-body p-0" style="height: 500px;">
+                    <div id="chatbotMessages" class="p-3" style="height: 400px; overflow-y: auto; background: #f8f9fa;">
+                        <!-- Messages akan dimuat via JavaScript -->
+                    </div>
+                    <div class="p-3 border-top">
+                        <div class="d-flex gap-2 mb-2 flex-wrap">
+                            <button class="btn btn-sm btn-outline-primary quick-btn" data-question="paket">
+                                <i class="bi bi-box-seam"></i> Tanya Paket
+                            </button>
+                            <button class="btn btn-sm btn-outline-primary quick-btn" data-question="jadwal">
+                                <i class="bi bi-calendar"></i> Jadwal Umroh
+                            </button>
+                            <button class="btn btn-sm btn-outline-primary quick-btn" data-question="daftar">
+                                <i class="bi bi-person-plus"></i> Cara Daftar
+                            </button>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" 
+                                   class="form-control" 
+                                   id="chatbotInput" 
+                                   placeholder="Tulis pesan Anda...">
+                            <button class="btn btn-primary" id="chatbotSend">
+                                <i class="bi bi-send"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 1100;">
+        <!-- Toast notifications akan muncul di sini -->
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
     <script src="script.js"></script>
+    <script src="chatbot.js"></script>
 </body>
 </html>
 
